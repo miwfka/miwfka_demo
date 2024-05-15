@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="height: 100px; width: 100%; background-color: antiquewhite; display: flex; align-items: center;">
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}"><button>Выйти нах</button></a>
+        {% else %}
+        <a href="{% url 'login' %}"><button>Войти</button></a>
+        <a href="{% url 'main' %}"><button>Зарегистрироваться</button></a>
+        {% endif %}
+    </div>
+    <div>Мои заказы
+        <div class="myOrders" style="width: 110px; min-height: 10px; background-color: aquamarine;">
+            {% if orders %}
+                {% for order in orders %}
+                <div style="border: 1px solid red;">
+                Заказ №{{order.id}} 
+                Товар: {{order.products_id}}
+                Количество: {{order.qty}}
+                статус: {{order.status_id}}
+                </div>
+                {% endfor %}
+            {% else %}
+                <div>Заказов нет</div>
+            {% endif %}
+        </div>
+    </div>
+    <a href="{% url 'makeorder' %}"><button  style="cursor: pointer;">Сделать новый заказ</button></a>
+</body>
+</html>

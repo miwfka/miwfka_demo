@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <form action="{% url 'AppAction' %}" method="POST"> {% csrf_token %}
+        <select name="car" id="thisSelect" required>
+            <option value=""  disabled="disabled" selected="true">--Выберите тачку--</option>
+            {% for car in cars %}
+                <option id="{{car.id}}" value="{{car.id}}">{{car.name}}</option>
+            {% endfor %}
+          </select>
+        <input type="date" required name="date">
+        {% if messages %}
+            {% for message in messages %}
+                <div>{{message|safe}}</div>
+            {% endfor %}
+        {% endif %}
+        <input type="submit" value="Оставить заявку">
+    </form>
+</body>
+</html>

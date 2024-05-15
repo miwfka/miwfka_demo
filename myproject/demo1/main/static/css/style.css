@@ -1,0 +1,98 @@
+body{
+    margin: 0 auto;
+    background-color: antiquewhite;
+    width: 1920px;
+    height: 1024px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.headerbuttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1550px;
+}
+
+button{
+    border-radius: 8px;
+    border: 1px solid gray;
+    background-color: blanchedalmond;
+    cursor: pointer;
+    font-size: 15px;
+}
+.signbut{
+    height: 40px;
+    width: 110px;
+}
+.regbut{
+    height: 40px;
+    width: 160px;
+}
+
+.logoutbut{
+    height: 40px;
+    width: 110px;
+}
+
+.formContainer{
+    width: 100%;
+    height: 924px;
+    display: flex;
+    justify-content: center;
+}
+
+.thisform{
+    width: 700px;
+    height: 800px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.registrtext {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+input{
+    width: 500px;
+    height: 50px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.inputcontainer{
+    margin-bottom: 20px;
+}
+
+.underinputtext{
+    color: gray;
+    padding-left: 10px;
+}
+
+.subbutton{
+    background-color: blanchedalmond;
+    cursor: pointer;
+    border: 0px;
+    margin-top: 20px;
+}
+
+.subbutton:hover{
+    background-color: rgb(255, 216, 159);
+}
